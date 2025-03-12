@@ -20,6 +20,11 @@
 
 <html>
     <script type="module">
+        var rootDiv = document.createElement('div');
+        rootDiv.id = 'root';
+
+        document.getElementsByTagName('body')[0].append(rootDiv);
+
         var div = document.createElement('div');
         div.textContent = 'Hello World';
 
@@ -27,6 +32,5 @@
     </script>
 
     <body>
-        <div id="root"></div>
     </body>
 </html>
