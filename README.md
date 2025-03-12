@@ -1,4 +1,14 @@
 <div>
+  <h1>
+    -------------READ THIS FIRST------------
+  </h1>
+  <p>The purpose of forking this repo is so that I have a log of all the work I have done for the Epic React course. Feel free to look at how I solve problems, and watch as I improve! I completed this part ofthe course 2 years ago, but I am currently doing a refresher. Thanks for checking this out!</p>
+  <h1>
+    ----------------------------------------
+  </h1>
+</div>
+
+<div>
   <h1 align="center"><a href="https://www.epicreact.dev/modules/react-fundamentals-v1/react-fundamentals-welcome">React Fundamentals 🚀 EpicReact.Dev</a></h1>
   <strong>
     Learn the foundational concepts necessary for building
