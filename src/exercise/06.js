@@ -5,20 +5,22 @@ import * as React from 'react'
 import { useRef, useState } from 'react';
 
 function UsernameForm({onSubmitUsername}) {
-  const [error, setError] = useState(null);
+  const [username, setUsername] = useState('');
+  // const [error, setError] = useState(null);
+
   const inputRef = useRef('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    onSubmitUsername(inputRef.current.value);
+    onSubmitUsername(username);
   }
 
   const handleChange = (e) => {
-    const value = inputRef.current.value;
+    setUsername(inputRef.current.value.toLowerCase());
 
-    const isValid = value === value.toLowerCase();
-    setError(isValid ? null : 'Username must be lower case');
+    // const isValid = value === value.toLowerCase();
+    // setError(isValid ? null : 'Username must be lower case');
   }
   
 
@@ -31,10 +33,10 @@ function UsernameForm({onSubmitUsername}) {
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="usernameInput">Username:</label>
-        <input onChange={handleChange} type="text" id='usernameInput' ref={inputRef}/>
-        {error ? <div style={{color: 'red'}} role='alert'>{error}</div> : null}
+        <input value={username} onChange={handleChange} type="text" id='usernameInput' ref={inputRef}/>
+        {/* {error ? <div style={{color: 'red'}} role='alert'>{error}</div> : null} */}
       </div>
-      <button disabled={error} type="submit">Submit</button>
+      <button type="submit">Submit</button>
     </form>
   )
 }
